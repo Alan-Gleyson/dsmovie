@@ -1,0 +1,40 @@
+/*create class*/
+/*.dsmovie-nav-content {
+	background-color: var(--color-primary);
+}*/
+
+header {
+	background-color: var(--color-primary);
+	height: 60px;
+	display: flex;
+	align-items: center;
+}
+
+
+.dsmovie-nav-content {
+	/*coloca em serie elemts do Navbar*/
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #fff;
+}
+
+.dsmovie-nav-content h1 {
+	margin: 0;
+	font-weight: 700;
+	font-size: 24px;
+
+}
+
+/*dispor side by side giticon e Nome*/
+.dsmovie-contact-container {
+	display: flex;
+	align-items: center;
+
+	
+}
+
+.dsmovie-contact-link {
+	margin: 0 0 0 10px;
+	font-size: 12px;
+}
