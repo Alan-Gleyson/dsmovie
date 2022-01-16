@@ -1,9 +1,13 @@
 package com.devsuperior.dsmovie.entities;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 //mapeamento objeto-relacional do Bd
@@ -20,6 +24,11 @@ public class Movie {
 	private Double score;
 	private Integer count;
 	private String image;
+	
+	//pra ter todas referências de um movie, deve mexer na classe Movie(fim)
+	// Set (remember set Python)
+	@OneToMany(mappedBy = "id.movie")
+	private Set<Score> scores = new HashSet<>();
 	
 	//Construtor Movie instanciado
 	public Movie() {
@@ -73,7 +82,10 @@ public class Movie {
 	public void setImage(String image) {
 		this.image = image;
 	}
-
+	//get pro Score
+	public Set<Score> getScores() {
+		return scores;
+	}
 	
 }
 

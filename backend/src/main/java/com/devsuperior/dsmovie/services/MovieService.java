@@ -17,7 +17,7 @@ import com.devsuperior.dsmovie.repositories.MovieRepository;
 public class MovieService {
 	
 	@Autowired
-	public MovieRepository repository;
+	private MovieRepository repository;
 	
 	// "@Transactional" garanti q esse metódo resolva tudo q for da 
 	//JPA de transação nesssa camada de srviço 
